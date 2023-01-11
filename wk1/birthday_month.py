@@ -20,3 +20,4 @@ def compare_case_insensitive(st1, st2):
 
 # Remember to call main function!
 main()
+print('End of program, Thank you')
