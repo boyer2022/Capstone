@@ -6,8 +6,9 @@ import sqlite3
 db = 'products.sqlite'
 
 with sqlite3.connect(db) as conn:
-    conn.execute('CREATE TABLE IF NOT EXISTS products (name TEXT UNIQUE, quantity INT)')
-    # Alternative way to create primary keys. No need to call product_id for INSERT statement- will be numbered for you
+    # Uncomment first conn.execute... to see difference
+    # conn.execute('CREATE TABLE IF NOT EXISTS products (name TEXT UNIQUE, quantity INT)')
+        # Alternative way to create primary keys. No need to call product_id for INSERT statement- will be numbered for you
     conn.execute('CREATE TABLE IF NOT EXISTS products (product_id INTEGER PRIMARY KEY, name TEXT UNIQUE, quantity INT)')
 
 conn.close()
